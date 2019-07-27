@@ -1,6 +1,8 @@
+
 FROM alpine as build
 
-ENV HUGO_VERSION 0.41
+ARG HUGO_VERSION="0.56.0"
+ENV HUGO_VERSION=${HUGO_VERSION}
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
 # Install Hugo
@@ -9,22 +11,20 @@ RUN set -x && \
   wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} && \
   tar xzf ${HUGO_BINARY} && \
   rm -r ${HUGO_BINARY} && \
-  mv hugo /usr/bin && \
-  apk del wget ca-certificates && \
-  rm /var/cache/apk/*
+  mv hugo /usr/bin
 
-COPY ./ /site
+COPY ./ /build
 
-WORKDIR /site
+WORKDIR /build
 
 RUN /usr/bin/hugo
 
 FROM nginx:alpine
 
-LABEL maintainer Eduardo Reyes <eduardo@reyes.im>
+LABEL maintainer André Lademann <vergissberlin@googlemail.com>
 
 COPY ./config/nginx/default.conf /etc/nginx/conf.d/default.conf
 
-COPY --from=build /site/public /var/www/html
+COPY --from=build /build/public /var/www/html
 
-WORKDIR /var/www/site
+WORKDIR /var/www/html
