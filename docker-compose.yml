@@ -4,9 +4,8 @@ services:
     image: vergissberlin/andrelademann-de-static
     labels:
       com.centurylinklabs.watchtower.enable: true
-  watchtower:
-    image: containrrr/watchtower
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ~/.docker/config.json:/config.json
-    command: --interval 30
+    environment:
+      - VIRTUAL_HOST=${DOMAINS}
+      - VIRTUAL_NETWORK=${NETWORK}
+      - LETSENCRYPT_HOST=${DOMAINS}
+      - LETSENCRYPT_EMAIL=info@andrelademann.de
