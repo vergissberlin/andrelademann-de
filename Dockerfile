@@ -1,11 +1,12 @@
 
 FROM alpine as build
+LABEL com.centurylinklabs.watchtower.enable="false"
 
 ARG HUGO_VERSION="0.56.0"
 ENV HUGO_VERSION=${HUGO_VERSION}
 ENV HUGO_BINARY hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
 
-# Install Hugo
+WORKDIR /build
 RUN set -x && \
   apk add --update wget ca-certificates && \
   wget https://github.com/spf13/hugo/releases/download/v${HUGO_VERSION}/${HUGO_BINARY} && \
@@ -14,17 +15,12 @@ RUN set -x && \
   mv hugo /usr/bin
 
 COPY ./ /build
-
-WORKDIR /build
-
 RUN /usr/bin/hugo
 
 FROM nginx:alpine
-
 LABEL maintainer André Lademann <vergissberlin@googlemail.com>
-
-COPY ./config/nginx/default.conf /etc/nginx/conf.d/default.conf
-
-COPY --from=build /build/public /var/www/html
+LABEL com.centurylinklabs.watchtower.enable="true"
 
 WORKDIR /var/www/html
+COPY ./config/nginx/default.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /build/public /var/www/html

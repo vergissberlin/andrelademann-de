@@ -5,8 +5,10 @@
 !/config.toml
 !/content
 !/data
-!/Dockerfile#
+!/Dockerfile
+!/docker-compose.yml
 !/.gitignore
 !/layouts
+!/README.md
 !/static
 !/themes

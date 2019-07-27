@@ -1,0 +1,10 @@
+version: '3'
+services:
+  web:
+    image: vergissberlin/andrelademann-de-static
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker/config.json:/config.json
+    command: --interval 30
