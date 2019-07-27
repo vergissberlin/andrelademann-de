@@ -9,7 +9,7 @@ description = "Marxico is a delicate Markdown editor for Evernote. With reliable
 +++
 
 
-# Welcome to Marxico Co
+# Welcome to Marxico Co & Co
 
 
 **Marxico** is a delicate Markdown editor for Evernote. With reliable storage and sync powered by Evernote, **Marxico** offers greate writing experience. 
