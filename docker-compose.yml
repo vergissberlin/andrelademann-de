@@ -2,6 +2,8 @@ version: '3'
 services:
   web:
     image: vergissberlin/andrelademann-de-static
+    labels:
+      com.centurylinklabs.watchtower.enable: true
   watchtower:
     image: containrrr/watchtower
     volumes:
