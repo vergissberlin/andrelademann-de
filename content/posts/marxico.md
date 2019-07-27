@@ -8,15 +8,13 @@ description = "Marxico is a delicate Markdown editor for Evernote. With reliable
 
 +++
 
-
 # Welcome to Marxico Co & Co
-
 
 **Marxico** is a delicate Markdown editor for Evernote. With reliable storage and sync powered by Evernote, **Marxico** offers greate writing experience. 
 
 - **Versatile** - supporting code highlight, *LaTeX* & flow charts,  inserting images & attachments by all means.
 - **Exquisite** -  neat but powerful editor, featuring offline docs, live preview, and offering the [desktop client][1] and offline [Chrome App][2].
-- **Sophisticated** - deeply integrated with Evernote, supporting notebook & tags, two-way bind editing.   
+- **Sophisticated** - deeply integrated with Evernote, supporting notebook & tags, two-way bind editing.
 
 ----------
 
@@ -43,9 +41,11 @@ class SomeClass:
 ```
 
 ### LaTeX expression
+
 $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 ### Table
+
 | Item      |    Value | Qty  |
 | :-------- | --------:| :--: |
 | Computer  | 1600 USD |  5   |
@@ -53,7 +53,9 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 | Pipe      |    1 USD | 234  |
 
 ### Diagrams
+
 #### Flow charts
+
 ```flow
 st=>start: Start
 e=>end
@@ -64,7 +66,9 @@ st->op->cond
 cond(yes)->e
 cond(no)->op
 ```
-#### Sequence diagrams 
+
+#### Sequence diagrams
+
 ```sequence
 Alice->Bob: Hello Bob, how are you?
 Note right of Bob: Bob thinks
@@ -77,6 +81,7 @@ Bob-->Alice: I am good thanks!
 > - about **Flow charts** syntax [here][4].
 
 ### Checkbox
+
 You can use `- [ ]` and `- [x]` to create checkboxes, for example:
 
 - [ ] Item1
@@ -89,30 +94,36 @@ You can use `- [ ]` and `- [x]` to create checkboxes, for example:
 ### Dancing with Evernote
 
 #### Notebook & Tags
+
 **Marxico** add `@(Notebook)[tag1|tag2|tag3]` syntax to select notebook and set tags for the note. After typing `@(`, the notebook list would appear, please select one from it.  
 
 #### Title
+
 **Marxico** would adopt the first heading encountered as the note title. For example, in this manual the first line `Welcome to Marxico` is the title.
 
 #### Quick Editing
+
 Note saved by **Marxico** in Evernote would have a red ribbon button on the top-right corner. Click it and it would bring you back to **Marxico** to edit the note. 
 
 > **Note:** Currently **Marxico** is unable to detect and merge any modifications in Evernote by user. Please go back to **Marxico** to edit.
 
 #### Data Synchronization
+
 While saving rich HTML content in Evernote, **Marxico** puts the Markdown text in a hidden area of the note, which makes it possible to get the original text in **Marxico** and edit it again. This is a really brilliant design because:
 
 - it is beyond just one-way exporting HTML which other services do;
-- and it avoids privacy and security problems caused by storing content in a intermediate server. 
+- and it avoids privacy and security problems caused by storing content in a intermediate server.
 
-> **Privacy Statement: All of your notes data are saved in Evernote. Marxico doesn't save any of them.** 
+> **Privacy Statement: All of your notes data are saved in Evernote. Marxico doesn't save any of them.**
 
 #### Offline Storage
+
 **Marxico** stores your unsynchronized content locally in browser storage, so no worries about network and broswer crash. It also keeps the recent file list you've edited in `Document Management(Ctrl + O)`.
 
 > **Note:** Although browser storage is reliable in the most time, Evernote is born to do that. So please sync the document regularly while writing.
 
 ## Shortcuts
+
 Help    `Ctrl + /`
 Sync Doc    `Ctrl + S`
 Create Doc    `Ctrl + Alt + N`
@@ -127,12 +138,15 @@ Insert Link    `Ctrl + L`
 Convert Heading    `Ctrl + H`
 
 ## About Pro
+
 **Marixo** offers a free trial of 10 days. After that, you need to [purchase](http://marxi.co/purchase.html) the Pro service. Otherwise, you would not be able to sync new notes. Previous notes can be edited and synced all the time.
 
 ## Credits
+
 **Marxico** was first built upon [Dillinger][5], and the newest version is almost based on the awesome [StackEdit][6]. Acknowledgments to them and other incredible open source projects!
 
 ## Feedback & Bug Report
+
 - Twitter: [@gock2][7]
 - Email: <hustgock@gmail.com>
 
@@ -140,7 +154,7 @@ Convert Heading    `Ctrl + H`
 Thank you for reading this manual. Now please press `Ctrl + M` and click `Link with Evernote`. Enjoy your **Marxico** journey!
 
 
-[^demo]: This is a demo footnote. Read the [MultiMarkdown Syntax Guide](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes) to learn more. Note that Evernote disables ID attributes in its notes , so `footnote` and `TOC` are not actually working. 
+[^demo]: This is a demo footnote. Read the [MultiMarkdown Syntax Guide](https://github.com/fletcher/MultiMarkdown/wiki/MultiMarkdown-Syntax-Guide#footnotes) to learn more. Note that Evernote disables ID attributes in its notes , so `footnote` and `TOC` are not actually working.
 
   [1]: http://marxi.co/client_en
   [2]: https://chrome.google.com/webstore/detail/kidnkfckhbdkfgbicccmdggmpgogehop
@@ -149,4 +163,3 @@ Thank you for reading this manual. Now please press `Ctrl + M` and click `Link w
   [5]: http://dillinger.io
   [6]: http://stackedit.io
   [7]: https://twitter.com/gock2
-
