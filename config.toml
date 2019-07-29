@@ -9,30 +9,19 @@ theme = "beautifulhugo"
 title = "André Lademann"
 [Author]
 500px = "username"
-#bandcamp = "username"
 bitbucket = "vergissberlin"
-#email = "youremail@domain.com"
-#facebook = "username"
 github = "vergissberlin"
 gitlab = "vergissberlin"
 googleplus = "+vergissberlin"
-#instagram = "username"
-#itchio = "username"
 linkedin = "andre.lademann"
 name = "André Lademann"
 paypal = "vergissberlin"
-#reddit = "username"
-#snapchat = "username"
-#soundcloud = "username"
 spotify = "vergissberlin"
-#stackoverflow = "users/XXXXXXX/username"
 telegram = "vergissberlin"
 twitter = "vergissberlin"
-#vk = "username"
 website = "andrelademann.de"
 xing = "andre.lademann"
 youtube = "user/vergissberlin"
-
 [Params]
 comments = true
 commit = false
@@ -47,34 +36,23 @@ socialShare = true
 subtitle = "Build a beautiful and simple website in minutes"
 useHLJS = true
 wordCount = true
-
-
-[[menu.main]]
-name = "Blog"
-weight = 1
-
-[[menu.main]]
-name = "Projects"
-url = "projects"
-weight = 2
-
-[[menu.main]]
-identifier = "samples"
-name = "Samples"
-weight = 3
-
-[[menu.main]]
-name = "Tags"
-url = "tags"
-weight = 4
-
 [[menu.main]]
 name = "Code Sample"
 parent = "samples"
 url = "post/2016-03-08-code-sample"
 weight = 5
-
+[[menu.main]]
+name = "Tags"
+url = "tags"
+weight = 4
+[[menu.main]]
+identifier = "samples"
+name = "Samples"
+weight = 3
 [[menu.main]]
 name = "About"
 url = "page/about/"
 weight = 6
+[[menu.main]]
+name = "Blog"
+weight = 1
