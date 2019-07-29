@@ -1,4 +1,4 @@
-baseurl = "https://andrelademann.de"
+baseurl = "https://hugo.andrelademann.de"
 DefaultContentLanguage = "en"
 #DefaultContentLanguage = "ja"
 title = "Beautiful Hugo"
