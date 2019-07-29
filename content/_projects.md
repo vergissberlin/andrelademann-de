@@ -1,7 +1,4 @@
 +++
-[menu.main]
-name = "Projects"
-weight = 2
 
 +++
 ## Projects

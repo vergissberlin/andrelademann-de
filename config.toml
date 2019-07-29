@@ -37,6 +37,10 @@ subtitle = "Build a beautiful and simple website in minutes"
 useHLJS = true
 wordCount = true
 [[menu.main]]
+name = "Projects"
+url = "projects"
+weight = 2
+[[menu.main]]
 name = "Code Sample"
 parent = "samples"
 url = "post/2016-03-08-code-sample"
