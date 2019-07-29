@@ -8,6 +8,9 @@ test:
   stage: test
   script:
   - hugo
+  except:
+  - master
+  - staging
 
 build-artifacts:
   stage: build
