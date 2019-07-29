@@ -17,3 +17,4 @@
 docker login
 docker-compose -f docker-compose.watchdog.yml up -d
 ```
+...
