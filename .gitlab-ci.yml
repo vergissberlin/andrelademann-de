@@ -21,16 +21,6 @@ build:
   only:
   - master
 
-deploy_production:
-  stage: deploy
-  script:
-    - echo "Deploy to production server"
-  environment:
-    name: production
-    url: https://www.andrelademann.de
-  only:
-  - master
-
 deploy_staging:
   stage: deploy
   script:
@@ -40,3 +30,14 @@ deploy_staging:
     url: https://staging.andrelademann.de
   only:
   - staging
+
+deploy_production:
+  stage: deploy
+  script:
+    - echo "Deploy to production server"
+  environment:
+    name: production
+    url: https://www.andrelademann.de
+  when: manual
+  only:
+  - master
