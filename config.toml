@@ -6,11 +6,11 @@ pygmentsCodefencesGuessSyntax = true
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
 theme = "beautifulhugo"
-title = "André Lademann"
+title = "Andre Lademann"
 [Author]
 github = "vergissberlin"
 linkedin = "andre.lademann"
-name = "André Lademann"
+name = "Andre Lademann"
 paypal = "vergissberlin"
 telegram = "vergissberlin"
 twitter = "vergissberlin"
