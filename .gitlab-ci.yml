@@ -17,7 +17,7 @@ pages:
   only:
   - master
 
-deploy_staging:
+deploy_production:
   stage: deploy
   script:
     - echo "Deploy to production server"
