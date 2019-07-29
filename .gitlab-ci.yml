@@ -13,8 +13,7 @@ test:
   - master
   - staging
 
-
-build:
+build-artifacts:
   stage: build
   script:
   - hugo
@@ -24,8 +23,7 @@ build:
   only:
   - master
 
-
-build_master:
+build-image:
   image: docker:latest
   stage: build
   services:
@@ -38,8 +36,7 @@ build_master:
   only:
     - master
 
-
-deploy_staging:
+deploy-staging:
   stage: deploy
   script:
     - echo "Deploy to staging server"
@@ -49,7 +46,7 @@ deploy_staging:
   only:
   - staging
 
-deploy_production:
+deploy-production:
   stage: deploy
   script:
     - echo "Deploy to production server"
