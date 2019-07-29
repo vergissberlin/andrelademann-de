@@ -8,43 +8,34 @@ pygmentsUseClasses = true
 theme = "beautifulhugo"
 title = "André Lademann"
 [Author]
-500px = "username"
-bitbucket = "vergissberlin"
 github = "vergissberlin"
-gitlab = "vergissberlin"
-googleplus = "+vergissberlin"
 linkedin = "andre.lademann"
 name = "André Lademann"
 paypal = "vergissberlin"
-spotify = "vergissberlin"
 telegram = "vergissberlin"
 twitter = "vergissberlin"
-website = "andrelademann.de"
 xing = "andre.lademann"
 youtube = "user/vergissberlin"
+
 [Params]
-comments = true
+comments = false
 commit = false
 dateFormat = "January 2, 2006"
-delayDisqus = true
+delayDisqus = false
 favicon = "img/favicon.ico"
 logo = "img/avatar-icon.png"
 readingTime = true
 rss = true
 showRelatedPosts = true
-socialShare = true
-subtitle = "Build a beautiful and simple website in minutes"
+socialShare = false
+subtitle = "Passion for software"
 useHLJS = true
 wordCount = true
+
 [[menu.main]]
 name = "Projects"
 url = "projects"
 weight = 2
-[[menu.main]]
-name = "Code Sample"
-parent = "samples"
-url = "post/2016-03-08-code-sample"
-weight = 5
 [[menu.main]]
 name = "Tags"
 url = "tags"

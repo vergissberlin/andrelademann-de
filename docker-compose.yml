@@ -1,7 +1,7 @@
 version: '3.7'
 services:
   web:
-    image: vergissberlin/andrelademann-de-static
+    image: registry.gitlab.com/vergissberlin/andrelademann-de
     labels:
       com.centurylinklabs.watchtower.enable: true
     environment:

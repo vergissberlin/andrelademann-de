@@ -1,5 +1,6 @@
 /*
 
+!/.env.dist
 !/archtypes
 !/config
 !/config.toml
@@ -14,3 +15,6 @@
 !/README.md
 !/static
 !/themes
+
+# Always ignore
+.env

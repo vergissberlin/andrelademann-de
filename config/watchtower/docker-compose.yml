@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  watchtower:
+    image: containrrr/watchtower
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ~/.docker/config.json:/config.json
+    environment:
+     - REPO_USER
+     - REPO_PASS
+     - WATCHTOWER_NOTIFICATIONS
+     - WATCHTOWER_NOTIFICATION_EMAIL_FROM
+     - WATCHTOWER_NOTIFICATION_EMAIL_TO
+     - WATCHTOWER_NOTIFICATION_EMAIL_SERVER
+     - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_USER
+     - WATCHTOWER_NOTIFICATION_EMAIL_SERVER_PASSWORD
+    command: --interval 144 --cleanup --label-enable
+    restart: on-failure
