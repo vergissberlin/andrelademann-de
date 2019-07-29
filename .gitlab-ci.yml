@@ -14,7 +14,18 @@ test:
   - staging
 
 
-build-master:
+build:
+  stage: build
+  script:
+  - hugo
+  artifacts:
+    paths:
+    - public
+  only:
+  - master
+
+
+build_master:
   image: docker:latest
   stage: build
   services:
@@ -27,15 +38,6 @@ build-master:
   only:
     - master
 
-build:
-  stage: build
-  script:
-  - hugo
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
 
 deploy_staging:
   stage: deploy
