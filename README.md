@@ -6,6 +6,7 @@
 - Theme https://themes.gohugo.io/beautifulhugo/
 - Static page generator https://gohugo.io
 - Automated pull+restart on Docker image updates after updates https://containrrr.github.io/watchtower/
+- Gitlab for git and Docker hosting https://gitlab.com
 
 ## Howto
 
