@@ -6,6 +6,7 @@ test:
   - hugo
   except:
   - master
+  - staging
 
 pages:
   script:
@@ -15,7 +16,17 @@ pages:
     - public
   only:
   - master
-  
+
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to production server"
+  environment:
+    name: production
+    url: https://www.andrelademann.de
+  only:
+  - master
+
 deploy_staging:
   stage: deploy
   script:
@@ -24,4 +35,4 @@ deploy_staging:
     name: staging
     url: https://staging.andrelademann.de
   only:
-  - master
+  - staging
