@@ -6,6 +6,7 @@ stages:
 image: registry.gitlab.com/pages/hugo:latest
 
 test:
+  stage: test
   script:
   - hugo
   except:
@@ -13,6 +14,7 @@ test:
   - staging
 
 build:
+  stage: build
   script:
   - hugo
   artifacts:
