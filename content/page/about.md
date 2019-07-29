@@ -2,12 +2,12 @@
 title: About me
 subtitle: Why you'd want to go on a date with me
 comments: false
+
 ---
+My name is André Lademann. I have the following qualities:
 
-My name is Inigo Montoya. I have the following qualities:
-
-- I rock a great mustache
-- I'm extremely loyal to my family
+* I rock a great mustache
+* I'm extremely loyal to my family
 
 What else do you need?
 
