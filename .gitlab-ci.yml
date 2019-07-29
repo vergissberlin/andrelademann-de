@@ -37,7 +37,7 @@ deploy_production:
     - echo "Deploy to production server"
   environment:
     name: production
-    url: https://www.andrelademann.de
+    url: https://andrelademann.de
   when: manual
   only:
   - master
