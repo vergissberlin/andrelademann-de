@@ -1,4 +1,8 @@
-# All available Hugo versions are listed here: https://gitlab.com/pages/hugo/container_registry
+stages:
+  - test
+  - build
+  - deploy
+
 image: registry.gitlab.com/pages/hugo:latest
 
 test:
@@ -8,7 +12,7 @@ test:
   - master
   - staging
 
-pages:
+build:
   script:
   - hugo
   artifacts:
