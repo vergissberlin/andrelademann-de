@@ -1,5 +1,5 @@
 ---
-title: This is my forestry sample post
+title: Forestry sample post
 date: 2019-07-29T00:00:00+02:00
 content: 'Extra field - Li Europan lingues es membres del sam familie. Lor separat
   existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam
