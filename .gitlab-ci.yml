@@ -1,7 +1,6 @@
 stages:
   - test
   - build
-  - deploy
 
 image: registry.gitlab.com/pages/hugo:latest
 
@@ -23,7 +22,7 @@ build-artifacts:
   only:
   - master
 
-build-image:
+build-master:
   image: docker:latest
   stage: build
   services:
@@ -36,7 +35,20 @@ build-image:
   only:
     - master
 
-build-image-version:
+build-staging:
+  image: docker:latest
+  stage: build
+  services:
+    - docker:dind
+  before_script:
+    - docker login -u "$CI_REGISTRY_USER" -p "$CI_REGISTRY_PASSWORD" $CI_REGISTRY
+  script:
+    - docker build --pull -t "$CI_REGISTRY_IMAGE:staging" .
+    - docker push "$CI_REGISTRY_IMAGE"
+  only:
+    - staging
+
+build-version:
   image: docker:latest
   stage: build
   services:
@@ -48,24 +60,3 @@ build-image-version:
     - docker push "$CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG"
   except:
     - master
-
-deploy-staging:
-  stage: deploy
-  script:
-    - echo "Deploy to staging server"
-  environment:
-    name: staging
-    url: https://staging.andrelademann.de
-  only:
-  - staging
-
-deploy-production:
-  stage: deploy
-  script:
-    - echo "Deploy to production server"
-  environment:
-    name: production
-    url: https://andrelademann.de
-  when: manual
-  only:
-  - master
