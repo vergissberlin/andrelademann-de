@@ -15,3 +15,13 @@ pages:
     - public
   only:
   - master
+  
+deploy_staging:
+  stage: deploy
+  script:
+    - echo "Deploy to staging server"
+  environment:
+    name: staging
+    url: https://staging.andrelademann.de
+  only:
+  - master
