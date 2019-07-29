@@ -1,3 +1,6 @@
 [submodule "themes/bulma"]
 	path = themes/bulma
 	url = git@github.com:vergissberlin/bulma.git
+[submodule "themes/beautifulhugo"]
+	path = themes/beautifulhugo
+	url = https://github.com/halogenica/beautifulhugo.git
