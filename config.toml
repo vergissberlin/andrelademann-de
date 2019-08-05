@@ -9,35 +9,25 @@ title = "Andre Lademann"
 
 defaultContentLanguage = "en"
 
-[languages.en]
-weight = 0
-languageName = "English"
-
-[[languages.en.menu.main]]
-url    = "/"
-name   = "Home"
-weight = 0
-
-[languages.de]
-weight = 10
-languageName = "Deutsch"
-
-[[languages.de.menu.main]]
-url    = "/"
-name   = "Startseite"
-weight = 0
-
 [languages]
   [languages.en]
     title = "My blog"
     languageName = "English"
     weight = 1
+    [languages.en.menu.main]
+        url    = "/"
+        name   = "Home"
+        weight = 0
     [languages.en.params]
       linkedin = "andre.lademann"
   [languages.de]
-    title = "Mein blogue"
+    title = "Mein blog"
     languageName = "Deutsch"
     weight = 2
+    [languages.de.menu.main]
+        url    = "/"
+        name   = "Startseite"
+        weight = 0
     [languages.de.params]
       linkedin = "andre.lademann"
 
