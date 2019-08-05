@@ -8,22 +8,19 @@ pygmentsUseClasses = true
 theme = "beautifulhugo"
 title = "Andre Lademann"
 
-languages:
-  en:
-    languageName: English
-    params:
-      linkedin: "andre.lademann"
-    title: My blog
-    weight: 1
-  de:
-    languageName: Deutsch
-    params:
-      linkedin: "andre.lademann"
-      navigation:
-        help: Aide
-    title: Mein Blog
-    weight: 2
-
+[languages]
+  [languages.en]
+    title = "My blog"
+    languageName = "English"
+    weight = 1
+    [languages.en.params]
+      linkedin = "andre.lademann"
+  [languages.de]
+    title = "Mein blogue"
+    languageName = "Deutsch"
+    weight = 2
+    [languages.de.params]
+      linkedin = "andre.lademann"
 
 [Author]
 github = "vergissberlin"
