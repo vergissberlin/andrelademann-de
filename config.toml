@@ -7,6 +7,24 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 theme = "beautifulhugo"
 title = "Andre Lademann"
+
+languages:
+  en:
+    languageName: English
+    params:
+      linkedin: "andre.lademann"
+    title: My blog
+    weight: 1
+  de:
+    languageName: Deutsch
+    params:
+      linkedin: "andre.lademann"
+      navigation:
+        help: Aide
+    title: Mein Blog
+    weight: 2
+
+
 [Author]
 github = "vergissberlin"
 linkedin = "andre.lademann"
