@@ -1,4 +1,3 @@
-DefaultContentLanguage = "en"
 baseurl = "https://hugo.andrelademann.de"
 metaDataFormat = "yaml"
 pygmentsCodeFences = true
@@ -7,6 +6,26 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 theme = "beautifulhugo"
 title = "Andre Lademann"
+
+defaultContentLanguage = "en"
+
+[languages.en]
+weight = 0
+languageName = "English"
+
+[[languages.en.menu.main]]
+url    = "/"
+name   = "Home"
+weight = 0
+
+[languages.de]
+weight = 10
+languageName = "Deutsch"
+
+[[languages.de.menu.main]]
+url    = "/"
+name   = "Startseite"
+weight = 0
 
 [languages]
   [languages.en]
