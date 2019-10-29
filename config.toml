@@ -1,3 +1,4 @@
+DefaultContentLanguage = "en"
 baseurl = "https://hugo.andrelademann.de"
 metaDataFormat = "yaml"
 pygmentsCodeFences = true
@@ -6,30 +7,6 @@ pygmentsStyle = "trac"
 pygmentsUseClasses = true
 theme = "beautifulhugo"
 title = "Andre Lademann"
-
-defaultContentLanguage = "en"
-
-[languages]
-  [languages.en]
-    title = "My blog"
-    languageName = "English"
-    weight = 1
-    [languages.en.menu.main]
-        url    = "/"
-        name   = "Home"
-        weight = 0
-    [languages.en.params]
-      linkedin = "andre.lademann"
-  [languages.de]
-    title = "Mein blog"
-    languageName = "Deutsch"
-    weight = 2
-    [languages.de.menu.main]
-        url    = "/"
-        name   = "Startseite"
-        weight = 0
-    [languages.de.params]
-      linkedin = "andre.lademann"
 
 [Author]
 github = "vergissberlin"
