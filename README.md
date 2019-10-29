@@ -26,3 +26,12 @@ docker login docker.pkg.github.com --username vergissberlin
 docker build -t docker.pkg.github.com/vergissberlin/andrelademann-de/app .
 docker push docker.pkg.github.com/vergissberlin/andrelademann-de/app
 ```
+
+## Add content
+
+Start hugo (https://gohugo.io/)
+
+```bash
+brew install hugo
+hugo
+```
