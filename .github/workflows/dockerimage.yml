@@ -5,13 +5,16 @@ on: [push]
 jobs:
 
   build:
-    runs-on: ubuntu-latest
-    steps:
+    - name: Login to GitHub Registry
+      run: echo ${{ secrets.DOCKER_PASSWORD }} | docker login docker.pkg.github.com --username ${{ secrets.DOCKER_USERNAME }}  --password-stdin
+    
     - uses: actions/checkout@master
-    - name: Publish to Registry
-      uses: elgohr/Publish-Docker-Github-Action@master
-      with:
-        name: docker.pkg.github.com/vergissberlin/andrelademann-de/app
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-        registry: docker.pkg.github.com
+   
+    - name: Build the Docker Image
+      run: docker build . --file Dockerfile --tag docker.pkg.github.com/vergissberlin/andrelademann-de/app:latest
+    
+    - name: Push to GitHub Registry
+      run: docker push docker.pkg.github.com/vergissberlin/andrelademann-de/app:latest
+    
+    - name: Logout
+      run: docker logout
